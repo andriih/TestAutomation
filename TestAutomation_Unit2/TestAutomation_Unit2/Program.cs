@@ -10,7 +10,9 @@ namespace TestAutomation_Unit2
     {
         static void Main(string[] args)
         {
-            Person person = new Person("12/12/1990");
+
+
+            Person person = new Person();
 
             Console.WriteLine(person.GetInfo());
             Console.ReadKey();

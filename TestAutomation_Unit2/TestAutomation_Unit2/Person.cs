@@ -1,4 +1,7 @@
-﻿namespace TestAutomation_Unit2
+﻿using System;
+
+
+namespace TestAutomation_Unit2
 {
     public class Person
     {
@@ -8,24 +11,37 @@
         private int height;
         private string info;
 
-        public Person(string birthDay)
+        public Person()
         {
-            bDay = birthDay;
+            Console.Write("Enter a birh date in MM/DD/YYYY fromat: ");
+            bDay = Console.ReadLine();
+
+            Console.Write("Enter your gender: ");
+            gender = Console.ReadLine();
+
+            Console.Write("Enter a height: ");
+            height = Convert.ToInt32(Console.ReadLine());
         }
 
         private int getAge()
         {
-            return age = 20;
+            string Year = DateTime.Now.Year.ToString();
+            int currentYear = Int32.Parse(Year);
+
+            DateTime oDate = Convert.ToDateTime(bDay);
+            age = currentYear - oDate.Year;
+
+            return (int)age;
         }
 
         private string getGender()
         {
-            return gender = "male";
+            return gender;
         }
 
         private int getHeight()
         {
-            return height = 170;
+            return height;
         }
 
         public string GetInfo()

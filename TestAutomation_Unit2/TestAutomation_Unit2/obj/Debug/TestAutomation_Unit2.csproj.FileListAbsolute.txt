@@ -5,3 +5,10 @@ E:\Програми\Mentorship\TestAutomation_Unit2\TestAutomation_Unit2\obj\Deb
 E:\Програми\Mentorship\TestAutomation_Unit2\TestAutomation_Unit2\obj\Debug\TestAutomation_Unit2.csproj.CoreCompileInputs.cache
 E:\Програми\Mentorship\TestAutomation_Unit2\TestAutomation_Unit2\obj\Debug\TestAutomation_Unit2.exe
 E:\Програми\Mentorship\TestAutomation_Unit2\TestAutomation_Unit2\obj\Debug\TestAutomation_Unit2.pdb
+C:\Users\andrii.hnatyshyn\Desktop\Automation\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\bin\Debug\TestAutomation_Unit2.exe.config
+C:\Users\andrii.hnatyshyn\Desktop\Automation\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\bin\Debug\TestAutomation_Unit2.exe
+C:\Users\andrii.hnatyshyn\Desktop\Automation\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\bin\Debug\TestAutomation_Unit2.pdb
+C:\Users\andrii.hnatyshyn\Desktop\Automation\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\obj\Debug\TestAutomation_Unit2.csprojAssemblyReference.cache
+C:\Users\andrii.hnatyshyn\Desktop\Automation\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\obj\Debug\TestAutomation_Unit2.csproj.CoreCompileInputs.cache
+C:\Users\andrii.hnatyshyn\Desktop\Automation\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\obj\Debug\TestAutomation_Unit2.exe
+C:\Users\andrii.hnatyshyn\Desktop\Automation\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\obj\Debug\TestAutomation_Unit2.pdb
