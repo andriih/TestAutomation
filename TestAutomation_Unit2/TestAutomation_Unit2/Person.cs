@@ -28,9 +28,23 @@ namespace TestAutomation_Unit2
             string Year = DateTime.Now.Year.ToString();
             int currentYear = Int32.Parse(Year);
 
-            DateTime oDate = Convert.ToDateTime(bDay);
-            age = currentYear - oDate.Year;
+            string Month = DateTime.Now.Month.ToString();
+            int currentMonth = Int32.Parse(Month);
 
+            string Day = DateTime.Now.Day.ToString();
+            int currentDay = Int32.Parse(Day);
+
+            DateTime birthDate = Convert.ToDateTime(bDay);
+
+            if (DateTime.Now.DayOfYear < birthDate.DayOfYear)
+            {
+                age = currentYear - birthDate.Year - 1;
+            }
+            else
+            {
+                age = currentYear - birthDate.Year;
+            }
+               
             return (int)age;
         }
 
