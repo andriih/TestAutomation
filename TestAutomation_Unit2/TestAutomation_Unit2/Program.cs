@@ -12,9 +12,11 @@ namespace TestAutomation_Unit2
         {
 
 
-            Person person = new Person();
+            //Person boy = new Person();
+            Person girl = new Person("02/14/1992","female",165);
 
-            Console.WriteLine(person.GetInfo());
+            //Console.WriteLine(boy.GetInfo());
+            Console.WriteLine(girl.GetInfo());
             Console.ReadKey();
         }
     }

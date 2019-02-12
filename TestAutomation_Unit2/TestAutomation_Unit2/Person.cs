@@ -23,16 +23,17 @@ namespace TestAutomation_Unit2
             height = Convert.ToInt32(Console.ReadLine());
         }
 
+        public Person(string dayOfBirth, string yourGender, int yourHeight)
+        {
+            bDay = dayOfBirth;
+            gender = yourGender;
+            height = yourHeight;
+        }
+
         private int getAge()
         {
             string Year = DateTime.Now.Year.ToString();
             int currentYear = Int32.Parse(Year);
-
-            string Month = DateTime.Now.Month.ToString();
-            int currentMonth = Int32.Parse(Month);
-
-            string Day = DateTime.Now.Day.ToString();
-            int currentDay = Int32.Parse(Day);
 
             DateTime birthDate = Convert.ToDateTime(bDay);
 
@@ -62,8 +63,5 @@ namespace TestAutomation_Unit2
         {
              return  info = "Birth day: "+bDay+"\nAge: "+getAge()+"\nGender: "+getGender()+"\nHeight: "+getHeight();
         }
-
-
-
     }
 }
