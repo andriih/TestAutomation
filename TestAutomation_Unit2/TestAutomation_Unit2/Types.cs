@@ -8,8 +8,6 @@ namespace TestAutomation_Unit2
 {
     class Types
     {
-        private string str;
-
         public void getConvertedStr(string str)
         {
             string[] words = str.Split(' ');
@@ -27,7 +25,7 @@ namespace TestAutomation_Unit2
             System.Console.WriteLine(sum);
         }
 
-        public int calc(int firstNum, string operation, int secondNum)
+        public dynamic calc(int firstNum, string operation, int secondNum)
         {
            int result;
 
@@ -40,11 +38,31 @@ namespace TestAutomation_Unit2
                 case "*":
                     return result = firstNum * secondNum;
                 case "/":
-                    return result = firstNum / secondNum;
+                    double div = (double)firstNum / secondNum;
+                    return div; 
                 default:
                     return result = 0;
             }
+        }
 
+        public string floatToString(params float[] floats)
+        {
+            string result="String: ";
+
+            foreach (float value in floats)
+            {
+                result += Convert.ToString(value)+"  ";
+            }
+            return result;
+        }
+
+        public void convertStringToChars(string str)
+        {
+            char[] characters = str.ToCharArray();
+            foreach (char chr in characters)
+            {
+                Console.WriteLine(chr);
+            }
         }
     }
 }

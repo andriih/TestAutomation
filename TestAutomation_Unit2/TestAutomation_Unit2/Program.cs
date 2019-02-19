@@ -21,6 +21,8 @@ namespace TestAutomation_Unit2
             Types type = new Types();
             type.getConvertedStr("1 2 3");
             Console.WriteLine(type.calc(12, "/", 45));
+            Console.WriteLine(type.floatToString(3.5F, 3.5F, 3.5F));
+            type.convertStringToChars("TEST TEST");
             Console.ReadKey();
 
         }
