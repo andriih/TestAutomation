@@ -64,5 +64,12 @@ namespace TestAutomation_Unit2
                 Console.WriteLine(chr);
             }
         }
+
+        public string stringBoxing()
+        {
+            Console.WriteLine("Enter String value: ");
+            object obj = Console.ReadLine();
+            return "<"+(string)obj+">";
+        }
     }
 }

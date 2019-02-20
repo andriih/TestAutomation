@@ -12,17 +12,24 @@ namespace TestAutomation_Unit2
         {
 
 
-            //Person boy = new Person();
-            Person girl = new Person("02/14/1992","female",165);
+           // Person boy = new Person();
+           // Person girl = new Person("02/14/1992", "female", 165);
 
             //Console.WriteLine(boy.GetInfo());
             //Console.WriteLine(girl.GetInfo());
 
             Types type = new Types();
-            type.getConvertedStr("1 2 3");
-            Console.WriteLine(type.calc(12, "/", 45));
-            Console.WriteLine(type.floatToString(3.5F, 3.5F, 3.5F));
-            type.convertStringToChars("TEST TEST");
+            //type.getConvertedStr("1 2 3");
+            //Console.WriteLine(type.calc(12, "/", 45));
+            //Console.WriteLine(type.floatToString(3.5F, 3.5F, 3.5F));
+            //type.convertStringToChars("TEST TEST");
+            Console.WriteLine(type.stringBoxing());
+
+
+            //ArraysCollections arr = new ArraysCollections();
+            // int[] a = { 1, 2, 345 };
+            //arr.arraySumAndMax(a);
+
             Console.ReadKey();
 
         }
