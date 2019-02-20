@@ -18,17 +18,18 @@ namespace TestAutomation_Unit2
             //Console.WriteLine(boy.GetInfo());
             //Console.WriteLine(girl.GetInfo());
 
-            Types type = new Types();
+            //Types type = new Types();
             //type.getConvertedStr("1 2 3");
             //Console.WriteLine(type.calc(12, "/", 45));
             //Console.WriteLine(type.floatToString(3.5F, 3.5F, 3.5F));
             //type.convertStringToChars("TEST TEST");
-            Console.WriteLine(type.stringBoxing());
+            //Console.WriteLine(type.stringBoxing());
 
+            Arrays arr = new Arrays();
+            int[] a = { 1, 2, 56 ,-23, -14};
 
-            //ArraysCollections arr = new ArraysCollections();
-            // int[] a = { 1, 2, 345 };
             //arr.arraySumAndMax(a);
+            arr.printArrayInReverseOrder(a);
 
             Console.ReadKey();
 
