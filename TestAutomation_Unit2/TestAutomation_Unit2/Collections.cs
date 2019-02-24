@@ -6,17 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestAutomation_Unit2
 {
-    class Collections<T>
+    class Collections
     {
-
-        public Collections()
-        {
-
-        }
-
-        public T Field{ get; set; }
-
-
     }
-
 }

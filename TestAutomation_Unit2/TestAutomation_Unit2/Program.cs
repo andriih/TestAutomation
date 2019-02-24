@@ -27,9 +27,9 @@ namespace TestAutomation_Unit2
 
             Arrays arr = new Arrays();
             int[] a = { 1, 2, 56 ,-23, -14};
-
-            //arr.arraySumAndMax(a);
-            arr.printArrayInReverseOrder(a);
+            //var b = arr.printArrayInReverseOrder(a);
+           // arr.printArrayInReverseOrder(a).ForEach(Console.WriteLine);
+            arr.printArrayInReverseOrder2(a).ToList().ForEach(Console.WriteLine);
 
             Console.ReadKey();
 
