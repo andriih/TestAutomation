@@ -29,7 +29,22 @@ namespace TestAutomation_Unit2
             int[] a = { 1, 2, 56 ,-23, -14};
             //var b = arr.printArrayInReverseOrder(a);
            // arr.printArrayInReverseOrder(a).ForEach(Console.WriteLine);
-            arr.printArrayInReverseOrder2(a).ToList().ForEach(Console.WriteLine);
+            //arr.printArrayInReverseOrder2(a).ToList().ForEach(Console.WriteLine);
+
+            List<int> numbers = new List<int>() { 1, 2, 3, 45 };
+           
+            numbers.Add(777);
+            numbers.ForEach(Console.WriteLine);
+            
+            Console.WriteLine("----------------");
+            
+            numbers.Remove(2);
+            numbers.ForEach(Console.WriteLine);
+
+            
+
+            Collections<int> list = new Collections<int>(numbers);
+            list.addElementTolist<int>(235);
 
             Console.ReadKey();
 
