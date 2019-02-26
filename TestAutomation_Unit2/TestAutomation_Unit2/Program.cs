@@ -33,18 +33,28 @@ namespace TestAutomation_Unit2
 
             List<int> numbers = new List<int>() { 1, 2, 3, 45 };
            
-            numbers.Add(777);
-            numbers.ForEach(Console.WriteLine);
+            //numbers.Add(777);
+            //numbers.ForEach(Console.WriteLine);
             
-            Console.WriteLine("----------------");
+            //Console.WriteLine("----------------");
             
-            numbers.Remove(2);
-            numbers.ForEach(Console.WriteLine);
+            //numbers.Remove(2);
+            //numbers.ForEach(Console.WriteLine);
 
-            
+            //Console.WriteLine("----------------");
+
+            //numbers.Insert(2, 333);
+            //numbers.ForEach(Console.WriteLine);
+
+            //Console.WriteLine("----------------");
+
+            //numbers.Add(999);
+            //numbers.ForEach(Console.WriteLine);
+
 
             Collections<int> list = new Collections<int>(numbers);
-            list.addElementTolist<int>(235);
+            int elem = 555;
+            list.addElementTolist(elem);
 
             Console.ReadKey();
 

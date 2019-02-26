@@ -22,9 +22,9 @@ namespace TestAutomation_Unit2
             dictionary = mydictionary;
         }
 
-        public List<T> addElementTolist<T>(T elem)
+        public List<T> addElementTolist(T elem)
         {
-             
+            return list.Add(elem);
         }
     }
 }
