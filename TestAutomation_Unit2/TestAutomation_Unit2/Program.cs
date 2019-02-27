@@ -32,29 +32,89 @@ namespace TestAutomation_Unit2
             //arr.printArrayInReverseOrder2(a).ToList().ForEach(Console.WriteLine);
 
             List<int> numbers = new List<int>() { 1, 2, 3, 45 };
-           
-            //numbers.Add(777);
-            //numbers.ForEach(Console.WriteLine);
-            
-            //Console.WriteLine("----------------");
-            
-            //numbers.Remove(2);
-            //numbers.ForEach(Console.WriteLine);
+            numbers.Insert(0, 222222222);
+            numbers.ForEach(Console.WriteLine);
 
-            //Console.WriteLine("----------------");
+            Console.WriteLine("----------------");
 
-            //numbers.Insert(2, 333);
-            //numbers.ForEach(Console.WriteLine);
+            numbers.Insert(2, 234);
+            numbers.ForEach(Console.WriteLine);
 
-            //Console.WriteLine("----------------");
+            Console.WriteLine("----------------");
 
-            //numbers.Add(999);
-            //numbers.ForEach(Console.WriteLine);
+            numbers.Add(777);
+            numbers.ForEach(Console.WriteLine);
 
+            Console.WriteLine("----------------");
+
+            numbers.Remove(2);
+            numbers.ForEach(Console.WriteLine);
+
+            Console.WriteLine("----------------");
+
+            //Remove last one element in the list
+            numbers.RemoveAt(numbers.Count - 1);
+            numbers.ForEach(Console.WriteLine);
+            Console.WriteLine("----------------");
+
+            //Searching for elements 
+            int item = numbers.IndexOf(45);
+            Console.WriteLine(item);
+            Console.WriteLine("----------------");
+
+            //Accessing items by index or keys
+            int itemByIndex = numbers[item];
+            Console.WriteLine(itemByIndex);
+            Console.WriteLine("----------------");
+
+            //Check for element existence 
+            Console.WriteLine(numbers.Contains(itemByIndex)); //true
+            Console.WriteLine(numbers.Contains(123)); //false
+            Console.WriteLine("----------------");
+
+            //Update elements value
+            int updated = 88888888;
+            numbers[4] = updated ; // 45 to 88888888
+            numbers.ForEach(Console.WriteLine);
+            Console.WriteLine("----------------");
+
+            //Clean elements
+            numbers.Clear();
+            numbers.ForEach(Console.WriteLine);
+            Console.WriteLine("Cleaned!");
 
             Collections<int> list = new Collections<int>(numbers);
             int elem = 555;
             list.addElementTolist(elem);
+            numbers.ForEach(Console.WriteLine);
+
+            //DICTIONARIES
+            //Adding/Removing elements (Beginning, middle, end) 
+
+            Dictionary<string, string> zipCodes = new Dictionary<string, string>();
+
+            zipCodes.Add("France", "FR");
+            zipCodes.Add("Spain", "ES");
+            zipCodes.Add("Japan", "JP");
+            zipCodes.Add("Turkey", "TK");
+
+            //Remove
+            zipCodes.Remove("TR");
+            zipCodes.ToList().ForEach(x => Console.WriteLine(x.Key));
+            Console.WriteLine("----------------");
+
+            //Searching for elements 
+            bool ifContainsKey = zipCodes.ContainsKey("Turkey");
+            Console.WriteLine(ifContainsKey); //True
+
+            bool ifContainsValue = zipCodes.ContainsValue("zzz");
+            Console.WriteLine(ifContainsValue); //False
+
+            // Accessing items by index or keys
+            string getItemByKey = zipCodes["Spain"];
+            Console.WriteLine(getItemByKey);
+            Console.WriteLine("----------------");
+
 
             Console.ReadKey();
 
