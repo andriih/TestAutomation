@@ -83,7 +83,7 @@ namespace TestAutomation_Unit2
             numbers.ForEach(Console.WriteLine);
             Console.WriteLine("Cleaned!");
 
-            Collections<int> list = new Collections<int>(numbers);
+            CollectionsGeneric<int> list = new CollectionsGeneric<int>(numbers);
             int elem = 555;
             list.addElementTolist(elem);
             numbers.ForEach(Console.WriteLine);
@@ -115,6 +115,53 @@ namespace TestAutomation_Unit2
             Console.WriteLine(getItemByKey);
             Console.WriteLine("----------------");
 
+            string country = zipCodes.FirstOrDefault(x => x.Value.Contains("FR")).Key;
+            Console.WriteLine(country);
+            Console.WriteLine("----------------");
+
+            string value;
+            zipCodes.TryGetValue("Japan", out value);
+            Console.WriteLine(value);
+            Console.WriteLine("----------------");
+
+            //Check for element existence 
+
+            if (zipCodes.ContainsKey("Japan"))
+            {
+                Console.WriteLine("Exists!");
+            }
+            else
+            {
+                Console.WriteLine("Not Exists!");
+            }
+
+            if (zipCodes.ContainsValue("JP"))
+            {
+                Console.WriteLine("Value Exists!");
+            }
+            else
+            {
+                Console.WriteLine("Value Not Exists!");
+            }
+
+            //Update elements value
+            zipCodes["Japan"] = "JAP";
+            zipCodes.ToList().ForEach(x => Console.WriteLine( x.Value));
+            Console.WriteLine("----------------");
+
+            //Update key
+            string val = zipCodes["Spain"];
+            zipCodes.Remove("Spain");
+            zipCodes["New Spain"] = val;
+
+            zipCodes.ToList().ForEach(elm => Console.WriteLine("Key = {0}, Value = {1}", elm.Key,elm.Value));
+            Console.WriteLine("----------------");
+
+
+            //Clean elements
+            zipCodes.Clear();
+            zipCodes.ToList().ForEach(elm => Console.WriteLine("Key = {0}, Value = {1}", elm.Key, elm.Value));
+            Console.WriteLine("Dict Cleared!");
 
             Console.ReadKey();
 
