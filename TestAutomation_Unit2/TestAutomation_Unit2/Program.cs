@@ -10,10 +10,13 @@ namespace TestAutomation_Unit2
     {
         static void Main(string[] args)
         {
-            List<int> intList = new List<int>() { 1,2,3,4,5,6,7,8,9};
+            List<int> intList = new List<int>() { 5, 17, 3, 9, 14, 2};
             Statement numbers = new Statement();
             Console.WriteLine(numbers.getMeanInt(intList));
 
+            Console.WriteLine(numbers.getMedianInt(intList));
+
+            numbers.getMedianInt2(intList);
 
             Console.ReadKey();
         }
