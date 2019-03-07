@@ -96,18 +96,28 @@ namespace TestAutomation_Unit2
                 if (name == "James")
                 {
                     Console.WriteLine(" 'James' name was found!");
-                    break;
                 }
             }
        }
         
         public void ConvertToInt(ArrayList list)
         {
-            foreach (string item in list)
+            foreach (object item in list)
             {
-                if (Int32.TryParse(item, out int result))
+                // !(Int32.TryParse(Convert.ToString(item), out int result))
+                if (item is string)
                 {
-                   
+                    Console.WriteLine("Cannot convert to int: " + item+" ("+ item.GetType()+")");
+                } 
+                if (item is double)
+                {
+                    int intFromDouble = Convert.ToInt32(item);
+                    Console.WriteLine("Double "+ item+"("+item.GetType()+")" + " to int " + intFromDouble);
+                    continue;
+                }
+                if(item is int)
+                {
+                    Console.WriteLine("To in : "+ item);
                 }
             }
         }
