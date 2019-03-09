@@ -11,7 +11,7 @@ namespace TestAutomation_Unit2
     {
         private List<int> collection { get; set; }
 
-        public int getMean(List<int> collection)
+        public int GetMean(List<int> collection)
         {
             int mean = default(int);
             foreach (int number in collection)
@@ -21,7 +21,7 @@ namespace TestAutomation_Unit2
             return mean / collection.Count;
         }
 
-        public  int getMedian(List<int> collection)
+        public  int GetMedian(List<int> collection)
         {
             int[] array = collection.ToArray();
             Array.Sort(array);
@@ -43,7 +43,7 @@ namespace TestAutomation_Unit2
             return array[(count / 2) - 1];
         }
 
-        public int getMode(List<int> collection)
+        public int GetMode(List<int> collection)
         {
             int[] array = collection.ToArray();
             Dictionary<int, int> counts = new Dictionary<int, int>();
@@ -96,6 +96,7 @@ namespace TestAutomation_Unit2
                 if (name == "James")
                 {
                     Console.WriteLine(" 'James' name was found!");
+                    break;
                 }
             }
        }
@@ -104,10 +105,20 @@ namespace TestAutomation_Unit2
         {
             foreach (object item in list)
             {
-                // !(Int32.TryParse(Convert.ToString(item), out int result))
-                if (item is string)
+                Int32.TryParse(Convert.ToString(item), out int result);
+                if (result == 0 && !(item is double))
                 {
-                    Console.WriteLine("Cannot convert to int: " + item+" ("+ item.GetType()+")");
+                    string strValue = Convert.ToString(item);
+                    var numeric = new String(strValue.Where(char.IsDigit).ToArray());
+                    if (numeric == "")
+                    {
+                        Console.WriteLine("Cannot convert to int: '" + strValue + "' (" + item.GetType() + ")" );
+                    }
+                    else
+                    {
+                        Console.WriteLine("Cannot convert to int: '" + strValue + "' (" + item.GetType() + ") : Int from String:" + numeric);
+                    }
+                    
                 } 
                 if (item is double)
                 {

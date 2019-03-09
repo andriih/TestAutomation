@@ -13,9 +13,9 @@ namespace TestAutomation_Unit2
         {
             List<int> intList = new List<int>() { 2, 3, 3, 5, 7 , 10 };
             Statement numbers = new Statement();
-            Console.WriteLine("Mean: "+numbers.getMean(intList));
-            Console.WriteLine("Median: "+numbers.getMedian(intList));
-            Console.WriteLine("Mode: "+numbers.getMode(intList));
+            Console.WriteLine("Mean: "+numbers.GetMean(intList));
+            Console.WriteLine("Median: "+numbers.GetMedian(intList));
+            Console.WriteLine("Mode: "+numbers.GetMode(intList));
 
             List<string> names = new List<string>()
             {
@@ -35,7 +35,7 @@ namespace TestAutomation_Unit2
             Statement name = new Statement();
             name.SearchForParticularNames(names);
 
-            ArrayList list = new ArrayList() { "string", 11.34, "text", 77.0001, "Some text", 23 };
+            ArrayList list = new ArrayList() { 23.44,"Ann", 34, "Dog", "Aplle 34" };
             Statement intAndString = new Statement();
             intAndString.ConvertToInt(list);
 
