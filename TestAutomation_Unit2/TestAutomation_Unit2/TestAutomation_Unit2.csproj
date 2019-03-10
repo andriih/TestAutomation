@@ -44,7 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arrays.cs" />
+    <Compile Include="Book.cs" />
     <Compile Include="CollectionsGeneric.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="MyBook.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
