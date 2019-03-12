@@ -8,10 +8,10 @@ namespace TestAutomation_Unit2
 {
     class Book : Item
     {
-        public int Price { get; set; }
-        public string Name { get; set; }
+        protected int Price { get; set; }
+        protected string Name { get; set; }
 
-        public Book(string name, int price)
+        public Book(string name = "Name", int price = 1)
         {
             Price = price;
             Name = name;
@@ -21,5 +21,6 @@ namespace TestAutomation_Unit2
         {
             Console.WriteLine("Name of book is '{0}', price: ${1}", Name, Price);
         }
+
     }
 }
