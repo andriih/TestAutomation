@@ -14,7 +14,7 @@ namespace TestAutomation_Unit2
             Book someBook = new Book("Some book",99);
             someBook.Info();
 
-           MyBook myBook = new MyBook("Andrew");
+           MyBook myBook = new MyBook("Some book", 99,"Andrew");
            myBook.Info();
 
             Console.WriteLine("Press any key to exit.");
