@@ -11,11 +11,7 @@ namespace TestAutomation_Unit2
     {
         static void Main(string[] args)
         {
-            Book someBook = new Book("Some book",99);
-            someBook.Info();
-
-           MyBook myBook = new MyBook("Andrew");
-           myBook.Info();
+           
 
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
