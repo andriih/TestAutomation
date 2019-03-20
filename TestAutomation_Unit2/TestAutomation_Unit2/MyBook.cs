@@ -10,7 +10,7 @@ namespace TestAutomation_Unit2
     {
         public string Owner { get; set; }
 
-        public MyBook(string name, int price, string owner) : base(,price)
+        public MyBook(string name, int price, string owner) : base(name,price)
         {
             Owner = owner;
         }
