@@ -17,7 +17,9 @@ namespace TestAutomation_Unit2
             //file.OpenAndSearchInFile("TestFile.txt","justo");
 
             XmlHelper xmlFile = new XmlHelper();
-            xmlFile.OpenAndSearchNodesInXml();
+            //xmlFile.OpenAndSearchNodesInXml();
+            xmlFile.AddNodeToXml("books.xml","Catalog","Book22");
+            xmlFile.AddNewBook("test","test","test","test","test","books.xml");
 
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
