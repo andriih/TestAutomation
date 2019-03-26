@@ -18,8 +18,10 @@ namespace TestAutomation_Unit2
 
             XmlHelper xmlFile = new XmlHelper();
             //xmlFile.OpenAndSearchNodesInXml();
-            xmlFile.AddNodeToXml("books.xml","Catalog","Book22");
-            xmlFile.AddNewBook("test","test","test","test","test","books.xml");
+            //xmlFile.AddNodeToXml("books.xml", "Some author", "Some ttl", "Fantasy", "Fantasy", "Fantasy", "Fantasy");
+            xmlFile.RemoveNodeFromXml("books.xml","bk101");
+
+
 
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();

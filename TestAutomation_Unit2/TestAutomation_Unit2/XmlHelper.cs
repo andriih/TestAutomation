@@ -16,7 +16,6 @@ namespace TestAutomation_Unit2
             XElement booksFromFile = XElement.Load(@"books.xml");
             //Console.WriteLine(booksFromFile);
 
-            //Serarch for second book
             XElement root = XElement.Load("books.xml");
             IEnumerable<XElement> address =
                 from el in root.Elements("Book")
@@ -26,57 +25,55 @@ namespace TestAutomation_Unit2
                 Console.WriteLine(el);
         }
 
-        public void AddNodeToXml(string fileName, string rootName, string childElement)
+        public void AddNodeToXml(string fileName, string author, string title, string genre, string price, string publishDate, string description)
         {
-            XElement root = XElement.Load(fileName);
-            XElement newTree = new XElement(rootName,
-                root.Element(childElement),
-                from att in root.Attributes()
-                select new XElement(att.Name, (string)att)
-            );
-            Console.WriteLine(newTree);
+            Random rnd = new Random();
+            int id = rnd.Next(1, 100);
+
+            XmlDocument doc = new XmlDocument();
+
+            doc.Load(fileName);
+
+            XmlNode book = doc.CreateElement("Book");
+            book.Attributes.Append(book.OwnerDocument.CreateAttribute("id"));
+            book.Attributes["id"].Value = id.ToString();
+
+            XmlNode Author = doc.CreateElement("Author");
+            XmlNode Title = doc.CreateElement("Title");
+            XmlNode Genre = doc.CreateElement("Genre");
+            XmlNode Price = doc.CreateElement("Price");
+            XmlNode PublishDate = doc.CreateElement("PublishDate");
+            XmlNode Description = doc.CreateElement("description");
+
+            Author.InnerText = author;
+            Title.InnerText = title;
+            Genre.InnerText = price;
+            Price.InnerText = publishDate;
+            PublishDate.InnerText = publishDate;
+            Description.InnerText = description;
+
+            book.AppendChild(Author);
+            book.AppendChild(Title);
+            book.AppendChild(Genre);
+            book.AppendChild(Price);
+            book.AppendChild(PublishDate);
+            book.AppendChild(Description);
+
+            doc.DocumentElement.AppendChild(book);
+            doc.Save(fileName);
         }
 
-        public XmlElement AddNewBook(string genre, string ISBN, string misc,
-    string title, string price, XmlDocument doc)
+
+        public void RemoveNodeFromXml(string fileName,string id)
         {
-            // Create a new book element.
-            XmlElement bookElement = doc.CreateElement("book", "http://www.contoso.com/books");
-
-            // Create attributes for book and append them to the book element.
-            XmlAttribute attribute = doc.CreateAttribute("genre");
-            attribute.Value = genre;
-            bookElement.Attributes.Append(attribute);
-
-            attribute = doc.CreateAttribute("ISBN");
-            attribute.Value = ISBN;
-            bookElement.Attributes.Append(attribute);
-
-            attribute = doc.CreateAttribute("publicationdate");
-            attribute.Value = misc;
-            bookElement.Attributes.Append(attribute);
-
-            // Create and append a child element for the title of the book.
-            XmlElement titleElement = doc.CreateElement("title");
-            titleElement.InnerText = title;
-            bookElement.AppendChild(titleElement);
-
-            // Introduce a newline character so that XML is nicely formatted.
-            bookElement.InnerXml =
-                bookElement.InnerXml.Replace(titleElement.OuterXml,
-                "\n    " + titleElement.OuterXml + " \n    ");
-
-            // Create and append a child element for the price of the book.
-            XmlElement priceElement = doc.CreateElement("price");
-            priceElement.InnerText = price;
-            bookElement.AppendChild(priceElement);
-
-            // Introduce a newline character so that XML is nicely formatted.
-            bookElement.InnerXml =
-                bookElement.InnerXml.Replace(priceElement.OuterXml, priceElement.OuterXml + "   \n  ");
-
-            return bookElement;
-
+            XDocument doc = XDocument.Load(fileName);
+            var q = from node in doc.Descendants("Book")
+                    let attr = node.Attribute("id")
+                    where attr != null && attr.Value == id
+                    select node;
+            q.ToList().ForEach(x => x.Remove());
+            doc.Save(fileName);
         }
+
     }
 }

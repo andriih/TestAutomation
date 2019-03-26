@@ -1,3 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-  <Book22 />
+  <Book id="bk102">
+    <Author>Garcia, Debra</Author>
+    <Title>Midnight Rain</Title>
+    <Genre>Fantasy</Genre>
+    <Price>5.95</Price>
+    <PublishDate>2000-12-16</PublishDate>
+    <Description>
+      A former architect battles corporate zombies,
+      an evil sorceress, and her own childhood to become queen
+      of the world.
+    </Description>
+  </Book>
 </Catalog>
