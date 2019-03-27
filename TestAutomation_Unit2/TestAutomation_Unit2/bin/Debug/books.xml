@@ -20,4 +20,12 @@
     <PublishDate>Fantasy</PublishDate>
     <description>Fantasy</description>
   </Book>
+  <Book id="85">
+    <Author>Some author</Author>
+    <Title>Some ttl</Title>
+    <Genre>Fantasy</Genre>
+    <Price>Fantasy</Price>
+    <PublishDate>Fantasy</PublishDate>
+    <description>Fantasy</description>
+  </Book>
 </Catalog>

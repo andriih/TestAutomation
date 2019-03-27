@@ -15,6 +15,7 @@ namespace TestAutomation_Unit2
         {
             FileHelper file = new FileHelper();
             file.OpenAndSearchInFile("TestFile.txt","justo");
+            file.EditFile("TestFile.txt", "Donec molestie lacus","TEST TEST TEST");
 
             XmlHelper xmlFile = new XmlHelper();
             xmlFile.OpenAndSearchNodesInXml();

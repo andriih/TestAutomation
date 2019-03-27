@@ -45,5 +45,12 @@ namespace TestAutomation_Unit2
                 Console.WriteLine("The file could not be read");
             }
         }
+
+        public void EditFile(string fileName, string wordInTxt, string newWordInTxt)
+        {
+            string text = File.ReadAllText(fileName);
+            text = text.Replace(wordInTxt, newWordInTxt);
+            File.WriteAllText( fileName, text);
+        }
     }
 }
