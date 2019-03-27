@@ -26,3 +26,9 @@ C:\Users\andrii.hnatyshyn\Desktop\TestAutomation\TestAutomation_Unit2\TestAutoma
 C:\Users\andrii.hnatyshyn\Desktop\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\obj\Debug\TestAutomation_Unit2.pdb
 C:\Users\Андрій\Desktop\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\obj\Debug\TestAutomation_Unit2.csprojAssemblyReference.cache
 C:\Users\andrii.hnatyshyn\Desktop\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\obj\Debug\TestAutomation_Unit2.csprojAssemblyReference.cache
+C:\Users\andrii.hnatyshyn\Desktop\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\andrii.hnatyshyn\Desktop\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\andrii.hnatyshyn\Desktop\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\bin\Debug\WebApiContrib.Formatting.JavaScriptSerializer.dll
+C:\Users\andrii.hnatyshyn\Desktop\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\andrii.hnatyshyn\Desktop\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\andrii.hnatyshyn\Desktop\TestAutomation\TestAutomation_Unit2\TestAutomation_Unit2\obj\Debug\TestAutomation_Unit2.csproj.CopyComplete

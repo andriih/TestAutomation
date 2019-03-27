@@ -12,4 +12,12 @@
       of the world.
     </Description>
   </Book>
+  <Book id="4">
+    <Author>Some author</Author>
+    <Title>Some ttl</Title>
+    <Genre>Fantasy</Genre>
+    <Price>Fantasy</Price>
+    <PublishDate>Fantasy</PublishDate>
+    <description>Fantasy</description>
+  </Book>
 </Catalog>

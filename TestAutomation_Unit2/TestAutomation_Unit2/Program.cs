@@ -13,15 +13,15 @@ namespace TestAutomation_Unit2
     {
         static void Main(string[] args)
         {
-            //FileHelper file = new FileHelper();
-            //file.OpenAndSearchInFile("TestFile.txt","justo");
+            FileHelper file = new FileHelper();
+            file.OpenAndSearchInFile("TestFile.txt","justo");
 
             XmlHelper xmlFile = new XmlHelper();
-            //xmlFile.OpenAndSearchNodesInXml();
-            //xmlFile.AddNodeToXml("books.xml", "Some author", "Some ttl", "Fantasy", "Fantasy", "Fantasy", "Fantasy");
+            xmlFile.OpenAndSearchNodesInXml();
+            xmlFile.AddNodeToXml("books.xml", "Some author", "Some ttl", "Fantasy", "Fantasy", "Fantasy", "Fantasy");
             xmlFile.RemoveNodeFromXml("books.xml","bk101");
 
-
+            Serialization.SerializeModelToJson();
 
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
